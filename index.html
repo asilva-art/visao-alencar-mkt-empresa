@@ -61,14 +61,32 @@
       border-bottom: 3px solid var(--gold);
     }
 
+    .hero-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+    }
+
     .eyebrow {
       display: inline-block;
-      margin: 0 0 18px;
+      margin: 0;
       font-size: 10px;
       letter-spacing: 2.8px;
       text-transform: uppercase;
       color: var(--gold);
       font-weight: 600;
+    }
+
+    .header-signature {
+      font-size: 10px;
+      letter-spacing: 1px;
+      color: rgba(255, 255, 255, 0.72);
+      font-weight: 500;
+      text-transform: uppercase;
+      white-space: nowrap;
     }
 
     h1 {
@@ -246,6 +264,16 @@
       line-height: 1.7;
     }
 
+    .signature {
+      padding: 0 36px 18px;
+      font-size: 10px;
+      letter-spacing: 1px;
+      color: var(--silver);
+      text-transform: uppercase;
+      text-align: right;
+      background: var(--snow);
+    }
+
     @media (max-width: 920px) {
       .wrap {
         padding: 18px 14px 46px;
@@ -253,6 +281,10 @@
 
       .hero {
         padding: 28px 20px 22px;
+      }
+
+      .header-signature {
+        white-space: normal;
       }
 
       h1 {
@@ -284,6 +316,10 @@
       .footer-note {
         padding: 18px 20px 24px;
       }
+
+      .signature {
+        padding: 0 20px 14px;
+      }
     }
   </style>
 </head>
@@ -291,7 +327,10 @@
   <main class="wrap">
     <section class="report">
       <header class="hero">
-        <div class="eyebrow">One Page Report • VM Academy / Escritório no Azul</div>
+        <div class="hero-meta">
+          <div class="eyebrow">One Page Report • VM Academy / Escritório no Azul</div>
+          <div class="header-signature">Alencar Silva • <span id="headerDateTime"></span></div>
+        </div>
         <h1>Escala com autoridade não nasce de pressão constante. Nasce de posicionamento, consistência e maturação de mercado.</h1>
         <p class="subtitle">
           Quando o marketing insiste em chamadas repetidas, CTAs contínuos e lançamentos frequentes, pode até gerar movimento no curto prazo, mas também desgasta percepção, banaliza a proposta de valor e enfraquece a sofisticação do produto. Para mentorias premium, o caminho mais sólido parece ser outro: menos ruído, mais inteligência estratégica.
@@ -384,7 +423,23 @@
       <div class="footer-note">
         Este material não conclui o debate; ele organiza a tensão estratégica central: crescer com mais pressão ou crescer com mais autoridade. Para uma marca premium, a segunda via tende a ser mais lenta no início, porém mais consistente, mais respeitada e mais lucrativa no longo prazo.
       </div>
+      <div class="signature">Alencar Silva</div>
     </section>
   </main>
+  <script>
+    (function () {
+      var el = document.getElementById("headerDateTime");
+      if (!el) return;
+      var now = new Date();
+      el.textContent = new Intl.DateTimeFormat("pt-BR", {
+        timeZone: "America/Sao_Paulo",
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit"
+      }).format(now);
+    })();
+  </script>
 </body>
 </html>
