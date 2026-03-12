@@ -6,7 +6,7 @@
   <title>One Page Report | Crescimento com autoridade</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;family=DM+Serif+Display&amp;display=swap" rel="stylesheet" />
   <style>
     :root {
       --navy: #0F2B46;
@@ -264,6 +264,208 @@
       line-height: 1.7;
     }
 
+    .mini-charts {
+      padding: 0 36px 26px;
+      display: grid;
+      gap: 14px;
+      background: var(--white);
+    }
+
+    .mini-card {
+      border: 1px solid var(--cloud);
+      border-radius: 6px;
+      background: var(--snow);
+      padding: 16px;
+    }
+
+    .mini-head {
+      margin-bottom: 10px;
+    }
+
+    .mini-label {
+      display: inline-block;
+      margin-bottom: 6px;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .mini-head h3 {
+      margin: 0 0 4px;
+      font-size: 17px;
+      color: var(--navy);
+      line-height: 1.35;
+    }
+
+    .mini-head p {
+      margin: 0;
+      font-size: 12px;
+      color: var(--slate);
+      line-height: 1.6;
+    }
+
+    .flow-scroll {
+      overflow-x: auto;
+      padding-bottom: 4px;
+    }
+
+    .flow-track {
+      min-width: 2200px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 0;
+    }
+
+    .flow-step {
+      width: 170px;
+      min-height: 88px;
+      border: 1px solid var(--cloud);
+      border-radius: 6px;
+      background: var(--white);
+      padding: 9px 10px 10px;
+      display: grid;
+      align-content: start;
+      gap: 7px;
+    }
+
+    .flow-step strong {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--white);
+      background: var(--navy);
+    }
+
+    .flow-step span {
+      font-size: 12px;
+      color: var(--charcoal);
+      line-height: 1.4;
+      font-weight: 500;
+    }
+
+    .flow-step.is-key {
+      background: var(--accent-10);
+      border-color: var(--accent-50);
+    }
+
+    .flow-step.is-key strong {
+      background: var(--accent);
+    }
+
+    .flow-step.is-final {
+      background: var(--gold-10);
+      border-color: #E4D4A8;
+    }
+
+    .flow-step.is-final strong {
+      background: var(--gold);
+      color: var(--navy);
+    }
+
+    .flow-link {
+      position: relative;
+      display: block;
+      width: 32px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--navy-50), var(--accent-50));
+      flex-shrink: 0;
+    }
+
+    .flow-link::after {
+      content: "";
+      position: absolute;
+      right: -6px;
+      top: -4px;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      border-left: 7px solid var(--accent-50);
+    }
+
+    .mini-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .metric-grid {
+      display: grid;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .metric-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .metric-row .metric-name {
+      font-size: 12px;
+      color: var(--charcoal);
+      margin-bottom: 4px;
+      font-weight: 600;
+    }
+
+    .metric-rail {
+      width: 100%;
+      height: 9px;
+      border-radius: 99px;
+      background: var(--white);
+      border: 1px solid var(--cloud);
+      overflow: hidden;
+    }
+
+    .metric-fill {
+      height: 100%;
+      width: var(--w);
+      background: linear-gradient(90deg, var(--navy-70), var(--accent));
+    }
+
+    .metric-val {
+      font-size: 11px;
+      color: var(--slate);
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      min-width: 64px;
+      text-align: right;
+    }
+
+    .cycle-shell {
+      border: 1px dashed var(--cloud);
+      border-radius: 6px;
+      background: var(--white);
+      padding: 10px;
+      margin-top: 8px;
+    }
+
+    .cycle-svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .mini-note {
+      margin: 0;
+      font-size: 11px;
+      color: var(--slate);
+      line-height: 1.65;
+      border-top: 1px solid var(--cloud);
+      padding-top: 10px;
+    }
+
+    .mini-note strong {
+      color: var(--navy);
+    }
+
     .signature {
       padding: 0 36px 18px;
       font-size: 10px;
@@ -315,6 +517,22 @@
 
       .footer-note {
         padding: 18px 20px 24px;
+      }
+
+      .mini-charts {
+        padding: 0 20px 20px;
+      }
+
+      .mini-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .flow-track {
+        min-width: 2000px;
+      }
+
+      .flow-step {
+        width: 158px;
       }
 
       .signature {
@@ -418,6 +636,146 @@
             </p>
           </article>
         </div>
+      </section>
+
+      <section class="mini-charts">
+        <article class="mini-card">
+          <div class="mini-head">
+            <span class="mini-label">Minigráfico 01</span>
+            <h3>Fluxo estratégico para produtos de elevado valor (visão Alencar)</h3>
+            <p>Cadeia de causa e efeito do posicionamento até margem no médio e longo prazo.</p>
+          </div>
+          <div class="flow-scroll" aria-label="Fluxo causal estratégico">
+            <div class="flow-track">
+              <div class="flow-step"><strong>1</strong><span>MKT: Compreensão Adequada do Cenário</span></div>
+              <span class="flow-link"></span>
+              <div class="flow-step"><strong>2</strong><span>Planejamento Ágil</span></div>
+              <span class="flow-link"></span>
+              <div class="flow-step"><strong>3</strong><span>Escolhas Inteligentes</span></div>
+              <span class="flow-link"></span>
+              <div class="flow-step is-key"><strong>4</strong><span>Posicionamento Assertivo (Precisão + Como Comunicar)</span></div>
+              <span class="flow-link"></span>
+              <div class="flow-step"><strong>5</strong><span>Otimização Tempo Expert</span></div>
+              <span class="flow-link"></span>
+              <div class="flow-step"><strong>6</strong><span>Mídias Funcionando Melhor (Orgânico / Pago)</span></div>
+              <span class="flow-link"></span>
+              <div class="flow-step"><strong>7</strong><span>Maior Precisão Persona versus Produto Ofertado</span></div>
+              <span class="flow-link"></span>
+              <div class="flow-step"><strong>8</strong><span>Menor Fricção com Público em geral</span></div>
+              <span class="flow-link"></span>
+              <div class="flow-step"><strong>9</strong><span>Menor Exposição Negativa (Expert + Marca)</span></div>
+              <span class="flow-link"></span>
+              <div class="flow-step"><strong>10</strong><span>Maior Otimização Pré-vendas</span></div>
+              <span class="flow-link"></span>
+              <div class="flow-step"><strong>11</strong><span>Maior Otimização Vendas</span></div>
+              <span class="flow-link"></span>
+              <div class="flow-step"><strong>12</strong><span>Maior Conversão</span></div>
+              <span class="flow-link"></span>
+              <div class="flow-step"><strong>13</strong><span>Ao Longo do Tempo</span></div>
+              <span class="flow-link"></span>
+              <div class="flow-step is-key"><strong>14</strong><span>Marca é Reconhecida Como Forte e Estratégica</span></div>
+              <span class="flow-link"></span>
+              <div class="flow-step"><strong>15</strong><span>Ciclo Se Repete</span></div>
+              <span class="flow-link"></span>
+              <div class="flow-step is-final"><strong>16</strong><span>Mais Vendas Orgânicas</span></div>
+              <span class="flow-link"></span>
+              <div class="flow-step is-final"><strong>17</strong><span>Maior Margem Ao Longo do Tempo</span></div>
+            </div>
+          </div>
+        </article>
+
+        <div class="mini-grid">
+          <article class="mini-card">
+            <div class="mini-head">
+              <span class="mini-label">Minigráfico 02</span>
+              <h3>Efeito acumulado por estágio</h3>
+              <p>Leitura relativa de intensidade para facilitar entendimento executivo.</p>
+            </div>
+            <div class="metric-grid">
+              <div class="metric-row">
+                <div>
+                  <div class="metric-name">Base estratégica</div>
+                  <div class="metric-rail"><div class="metric-fill" style="--w: 28%;"></div></div>
+                </div>
+                <div class="metric-val">Início</div>
+              </div>
+              <div class="metric-row">
+                <div>
+                  <div class="metric-name">Eficiência operacional</div>
+                  <div class="metric-rail"><div class="metric-fill" style="--w: 46%;"></div></div>
+                </div>
+                <div class="metric-val">Ganho</div>
+              </div>
+              <div class="metric-row">
+                <div>
+                  <div class="metric-name">Aderência mercado-produto</div>
+                  <div class="metric-rail"><div class="metric-fill" style="--w: 64%;"></div></div>
+                </div>
+                <div class="metric-val">Tração</div>
+              </div>
+              <div class="metric-row">
+                <div>
+                  <div class="metric-name">Otimização comercial</div>
+                  <div class="metric-rail"><div class="metric-fill" style="--w: 81%;"></div></div>
+                </div>
+                <div class="metric-val">Escala</div>
+              </div>
+              <div class="metric-row">
+                <div>
+                  <div class="metric-name">Reconhecimento + margem no tempo</div>
+                  <div class="metric-rail"><div class="metric-fill" style="--w: 100%; background: linear-gradient(90deg, var(--accent), var(--gold));"></div></div>
+                </div>
+                <div class="metric-val">Consolidação</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="mini-card">
+            <div class="mini-head">
+              <span class="mini-label">Minigráfico 03</span>
+              <h3>Ciclo virtuoso de marca premium</h3>
+              <p>Quando a marca fortalece, o ciclo reduz esforço bruto e melhora margem orgânica.</p>
+            </div>
+            <div class="cycle-shell">
+              <svg class="cycle-svg" viewBox="0 0 520 300" role="img" aria-label="Ciclo de marca premium">
+                <defs>
+                  <marker id="arrowNavy" markerWidth="8" markerHeight="8" refX="6" refY="3.5" orient="auto">
+                    <polygon points="0 0, 7 3.5, 0 7" fill="#3A6080"></polygon>
+                  </marker>
+                </defs>
+                <rect x="0.5" y="0.5" width="519" height="299" fill="#FFFFFF" stroke="none"></rect>
+                <path d="M 120 150 C 120 88, 172 50, 245 50" fill="none" stroke="#3A6080" stroke-width="2.2" marker-end="url(#arrowNavy)"></path>
+                <path d="M 272 50 C 347 50, 402 88, 402 150" fill="none" stroke="#3A6080" stroke-width="2.2" marker-end="url(#arrowNavy)"></path>
+                <path d="M 402 176 C 402 238, 347 258, 272 258" fill="none" stroke="#3A6080" stroke-width="2.2" marker-end="url(#arrowNavy)"></path>
+                <path d="M 245 258 C 172 258, 120 238, 120 176" fill="none" stroke="#3A6080" stroke-width="2.2" marker-end="url(#arrowNavy)"></path>
+
+                <rect x="176" y="16" width="168" height="42" rx="6" fill="#E8F4F8" stroke="#97C3D5"></rect>
+                <text x="260" y="33" text-anchor="middle" font-size="11" font-weight="600" fill="#0F2B46">Posicionamento assertivo</text>
+                <text x="260" y="47" text-anchor="middle" font-size="10" fill="#5A5A5A">mensagem certa para público certo</text>
+
+                <rect x="358" y="128" width="150" height="42" rx="6" fill="#E8F4F8" stroke="#97C3D5"></rect>
+                <text x="433" y="145" text-anchor="middle" font-size="11" font-weight="600" fill="#0F2B46">Melhor conversão</text>
+                <text x="433" y="159" text-anchor="middle" font-size="10" fill="#5A5A5A">pré-vendas + vendas otimizadas</text>
+
+                <rect x="178" y="242" width="164" height="42" rx="6" fill="#FFF9E6" stroke="#E4D4A8"></rect>
+                <text x="260" y="259" text-anchor="middle" font-size="11" font-weight="600" fill="#0F2B46">Marca forte no tempo</text>
+                <text x="260" y="273" text-anchor="middle" font-size="10" fill="#5A5A5A">reconhecimento + vendas orgânicas</text>
+
+                <rect x="12" y="128" width="154" height="42" rx="6" fill="#E8F4F8" stroke="#97C3D5"></rect>
+                <text x="89" y="145" text-anchor="middle" font-size="11" font-weight="600" fill="#0F2B46">Maior margem</text>
+                <text x="89" y="159" text-anchor="middle" font-size="10" fill="#5A5A5A">menos fricção e menos exposição</text>
+
+                <circle cx="260" cy="150" r="39" fill="#0F2B46"></circle>
+                <text x="260" y="145" text-anchor="middle" font-size="11" font-weight="700" fill="#FFFFFF">CICLO</text>
+                <text x="260" y="159" text-anchor="middle" font-size="10" fill="#FFFFFF">SE REPETE</text>
+              </svg>
+            </div>
+          </article>
+        </div>
+
+        <p class="mini-note">
+          <strong>Cadeia completa (base Alencar):</strong> MKT: Compreensão Adequada do Cenário &gt; Planejamento Ágil &gt; Escolhas Inteligentes = Posicionamento Assertivo (Precisão + Como Comunicar) &gt; Otimização Tempo Expert &gt; Mídias Funcionando Melhor (Orgânico / Pago) &gt; Maior Precisão Persona versus Produto Ofertado &gt; Menor Fricção com Público em geral &gt; Menor Exposição Negativa (Expert + Marca) &gt; Maior Otimização Pré-vendas &gt; Maior Otimização Vendas &gt; Maior Conversão &gt; Ao Longo do Tempo &gt; Marca é Reconhecida Como Forte e Estratégica &gt; Ciclo Se Repete &gt; Mais Vendas Orgânicas &gt; Maior Margem Ao Longo do Tempo.
+        </p>
       </section>
 
       <div class="footer-note">
